@@ -24,3 +24,17 @@ iframe {
     object-fit: contain; /* Ensures the content scales properly */
     overflow-x: auto; /* Allows horizontal scrolling */
 }
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    body {
+        justify-content: center; /* Center the PDF on mobile */
+    }
+
+    iframe {
+        width: 100vw; /* Maintain full width on mobile */
+        height: auto; /* Auto height to allow scrolling */
+        overflow-y: auto; /* Enable vertical scrolling if needed */
+        object-fit: contain; /* Keep aspect ratio */
+    }
+}
