@@ -1,0 +1,26 @@
+/* Reset default margins, paddings, and set the box-sizing to include padding and borders in the element's total width and height */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set the body to fill the entire screen without scrollbars */
+body {
+    overflow: hidden; /* Prevents scrolling */
+    display: flex; /* Enables flexible layout */
+    justify-content: flex-start; /* Aligns content to the left */
+    align-items: center; /* Vertically centers the content */
+    height: 100vh; /* Full height of the viewport */
+    width: 100vw; /* Full width of the viewport */
+    background-color: #000; /* Sets background to black */
+}
+
+/* Fullscreen display of the PDF */
+iframe {
+    width: 300vw; /* Full width of the viewport */
+    height: 300vh; /* Full height of the viewport */
+    border: none; /* Removes the default border */
+    object-fit: contain; /* Ensures the content scales properly */
+    overflow-x: auto; /* Allows horizontal scrolling */
+}
