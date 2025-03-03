@@ -21,20 +21,23 @@ iframe {
     width: 100vw; /* Full width of the viewport */
     height: 100vh; /* Full height of the viewport */
     border: none; /* Removes the default border */
+    overflow: hidden; /* Ensures no scrollbars on desktop */
     object-fit: contain; /* Ensures the content scales properly */
-    overflow-x: auto; /* Allows horizontal scrolling */
 }
 
 /* Mobile-specific styles */
 @media (max-width: 768px) {
     body {
+        overflow: auto; /* Allow body scrolling on mobile */
         justify-content: center; /* Center the PDF on mobile */
+        align-items: flex-start; /* Align to the top */
     }
 
     iframe {
-        width: 100vw; /* Maintain full width on mobile */
-        height: auto; /* Auto height to allow scrolling */
-        overflow-y: auto; /* Enable vertical scrolling if needed */
+        width: 100vw; /* Full width on mobile */
+        height: auto; /* Auto height to enable scrolling */
+        min-height: 100vh; /* Ensure at least the full screen height */
+        overflow-y: scroll; /* Allow vertical scrolling */
         object-fit: contain; /* Keep aspect ratio */
     }
 }
