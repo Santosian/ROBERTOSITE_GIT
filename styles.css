@@ -18,8 +18,8 @@ body {
 
 /* Fullscreen display of the PDF */
 iframe {
-    width: 100vw; /* Full width of the viewport */
-    height: 100vh; /* Full height of the viewport */
+    width: 80vw; /* Full width of the viewport */
+    height: 80vh; /* Full height of the viewport */
     border: none; /* Removes the default border */
     object-fit: contain; /* Ensures the content scales properly */
     overflow-x: auto; /* Allows horizontal scrolling */
