@@ -1,43 +1,74 @@
-/* Reset default margins, paddings, and set the box-sizing to include padding and borders in the element's total width and height */
+/* Reset default margins and padding, and set border-box for consistent sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Set the body to fill the entire screen without scrollbars */
+/* Body styling to fill the screen with a black background */
 body {
-    overflow: hidden; /* Prevents scrolling */
-    display: flex; /* Enables flexible layout */
-    justify-content: flex-start; /* Aligns content to the left */
-    align-items: center; /* Vertically centers the content */
-    height: 100vh; /* Full height of the viewport */
-    width: 100vw; /* Full width of the viewport */
-    background-color: #000; /* Sets background to black */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
 }
 
-/* Fullscreen display of the PDF */
-iframe {
-    width: 100vw; /* Full width of the viewport */
-    height: 100vh; /* Full height of the viewport */
-    border: none; /* Removes the default border */
-    overflow: hidden; /* Ensures no scrollbars on desktop */
-    object-fit: contain; /* Ensures the content scales properly */
+/* Container for the images */
+.pdf-image-container {
+    display: flex;
+    flex-direction: column; /* Displays images in a vertical scroll */
+    align-items: center;
+    overflow-y: auto;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    scroll-behavior: smooth;
+}
+
+/* Styling for the images */
+.pdf-image {
+    max-width: 100vw;
+    max-height: 100vh;
+    object-fit: contain; /* Ensures images scale properly */
+    background-color: #000;
 }
 
 /* Mobile-specific styles */
 @media (max-width: 768px) {
     body {
-        overflow: auto; /* Allow body scrolling on mobile */
-        justify-content: center; /* Center the PDF on mobile */
-        align-items: flex-start; /* Align to the top */
+        overflow: auto;
     }
 
-    iframe {
-        width: 100vw; /* Full width on mobile */
-        height: auto; /* Auto height to enable scrolling */
-        min-height: 100vh; /* Ensure at least the full screen height */
-        overflow-y: scroll; /* Allow vertical scrolling */
-        object-fit: contain; /* Keep aspect ratio */
+    .pdf-image-container {
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .pdf-image {
+        width: 100vw;
+        height: auto;
+        min-height: 100vh;
+    }
+}
+
+/* Desktop-specific styles */
+@media (min-width: 769px) {
+    body {
+        overflow: hidden;
+        background-color: #000;
+    }
+
+    .pdf-image-container {
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .pdf-image {
+        width: 100vw;
+        height: auto;
+        object-fit: contain;
     }
 }
