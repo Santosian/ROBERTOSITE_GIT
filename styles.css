@@ -30,9 +30,9 @@ body {
 
 /* Styling for the images */
 .pdf-image {
-    max-width: 100vw;
-    max-height: 100vh;
-    object-fit: contain; /* Ensures images scale properly */
+    width: 100vw;
+    height: 100vh; /* Makes sure images take the full viewport height */
+    object-fit: cover; /* Covers the entire screen without black gaps */
     background-color: #000;
 }
 
@@ -49,9 +49,9 @@ body {
 
     .pdf-image {
         width: 100vw;
-        height: auto;
-        min-height: 100vh;
-        margin-bottom: 0.5cm; /* Reduced spacing between images */
+        height: 100vh; /* Forces full height to avoid gaps */
+        object-fit: cover; /* Ensures images cover the screen */
+        margin-bottom: 0; /* Eliminates unwanted spacing */
     }
 }
 
