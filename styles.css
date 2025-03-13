@@ -74,18 +74,18 @@ body {
         margin-bottom: 1cm; /* 1 cm space between images */
     }
 }
-.pdf-image-container img:first-child { width: 122%; height: auto; }
+.pdf-image-container img:first-child { width: 100%; height: auto; }
 
 
 .pdf-image-container img:first-child {
     margin-top: 0px; /* Move the first image down */
-    margin-left: 20px; /* Move it to the right */
+    margin-left: 0px; /* Move it to the right */
 }
 
 
 .pdf-image-container img:first-child {
     position: relative;
     top: 0px; /* Move down */
-    left: 5; /* Move right */
+    left: 0px; /* Move right */
 }
 
