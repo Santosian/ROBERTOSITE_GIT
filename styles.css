@@ -51,6 +51,7 @@ body {
         width: 100vw;
         height: auto;
         min-height: 100vh;
+        margin-bottom: 0.5cm; /* Reduced spacing between images */
     }
 }
 
@@ -70,5 +71,6 @@ body {
         width: 100vw;
         height: auto;
         object-fit: contain;
+        margin-bottom: 1cm; /* 1 cm space between images */
     }
 }
